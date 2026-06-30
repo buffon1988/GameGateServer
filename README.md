@@ -38,9 +38,15 @@ GateServer is a lightweight, high-performance gateway service that sits between 
               ▲
               │
      ┌────────▼──────────┐
-     │  LogicManager     │  (Backend Orchestrator)
+     │  LogicManager     │  (Hall Server / Backend Orchestrator)
      └───────────────────┘
 ```
+
+GateServer 到后端的连接关系：
+
+- **大厅消息**（`LGU_STATE_CENTER`）→ GateServer 直接发送到 **LogicManager（大厅服务器）**
+- **牌桌消息**（`LGU_STATE_DESK`）→ GateServer 直接发送到对应 **LogicServer**
+- LogicManager 还负责维护 LogicServer 注册表、用户状态、负载调度，并定期向 GateServer 广播 LogicServer 列表（`MSG_LMG_2_G_SYNC_LOGIC`）
 
 ### Threading Model
 
