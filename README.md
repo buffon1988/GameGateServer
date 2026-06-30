@@ -1,5 +1,7 @@
 # GateServer
 
+[中文文档](README_CN.md) | English Docs
+
 A production-grade TCP gateway/proxy service for game servers, built on the **muduo** C++ networking library.
 
 ## Overview
