@@ -1,0 +1,20 @@
+# GateServer Configuration
+# ========================
+# This file configures the GateServer (gateway/proxy) service.
+# Copy this file to gateserver_config.ini and edit the values.
+
+# TCP listen port for client connections
+ListenPort = 8115
+
+# GateServer identification
+GateServerId = 1
+
+# GateServer's own IP address (advertised to backend servers)
+GateServerIp = 127.0.0.1
+
+# Authentication key for connecting to backend servers
+GateServerKey = change_me_to_a_secure_key
+
+# LogicManager (backend orchestrator) connection
+LogicManagerIp = 127.0.0.1
+LogicManagerPort = 11015

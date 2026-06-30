@@ -1,0 +1,25 @@
+# Build artifacts
+build/
+bin/
+*.o
+*.a
+*.so
+*.so.*
+
+# Config files (keep examples, exclude actual configs)
+gateserver_config.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# 3rdParty source archives
+*.tar.gz
+*.zip
